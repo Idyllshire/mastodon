@@ -11,6 +11,7 @@ import {
   termsOfServiceEnabled,
 } from 'flavours/glitch/initial_state';
 
+import { EorzeaClock } from './eorzea_clock';
 import classes from './link_footer.module.scss';
 
 export const LinkFooter: React.FC<{
@@ -20,6 +21,9 @@ export const LinkFooter: React.FC<{
 
   return (
     <footer className={classes.wrapper} data-context={context}>
+      <p>
+        <EorzeaClock />
+      </p>
       <section>
         <h2 className={classes.heading}>{`${domain}:`}</h2>
         <ul className={classes.list}>
