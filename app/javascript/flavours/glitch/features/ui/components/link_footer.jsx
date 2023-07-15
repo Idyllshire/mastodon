@@ -12,6 +12,8 @@ import { domain, version, source_url, statusPageUrl, profile_directory as profil
 import { PERMISSION_INVITE_USERS } from 'flavours/glitch/permissions';
 import { logOut } from 'flavours/glitch/utils/log_out';
 
+import { EorzeaClock } from './eorzea_clock'
+
 const messages = defineMessages({
   logoutMessage: { id: 'confirmations.logout.message', defaultMessage: 'Are you sure you want to log out?' },
   logoutConfirm: { id: 'confirmations.logout.confirm', defaultMessage: 'Log out' },
@@ -63,6 +65,10 @@ class LinkFooter extends PureComponent {
 
     return (
       <div className='link-footer'>
+        <p>
+          <EorzeaClock />
+        </p>
+
         <p>
           <strong>{domain}</strong>:
           {' '}
