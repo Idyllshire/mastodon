@@ -28,6 +28,10 @@ module Mastodon
       ['glitch', ENV.fetch('MASTODON_VERSION_METADATA', nil)].compact_blank.join('.')
     end
 
+    def suffix
+      "+idyl#{ENV.fetch('MASTODON_VERSION_SUFFIX', '')}"
+    end
+
     def to_a
       [major, minor, patch].compact
     end
@@ -44,7 +48,7 @@ module Mastodon
     end
 
     def repository
-      ENV.fetch('GITHUB_REPOSITORY', 'glitch-soc/mastodon')
+      ENV.fetch('GITHUB_REPOSITORY', 'idyllshire/mastodon')
     end
 
     def source_base_url
